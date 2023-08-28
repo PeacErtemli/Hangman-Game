@@ -1,31 +1,69 @@
-from english_words import get_english_words_set
-import random
 from functions import *
 
+print(""" _                                             
+| |                                            
+| |__   __ _ _ __   __ _ _ __ ___   __ _ _ __  
+| '_ \ / _` | '_ \ / _` | '_ ` _ \ / _` | '_ \ 
+| | | | (_| | | | | (_| | | | | | | (_| | | | |
+|_| |_|\__,_|_| |_|\__, |_| |_| |_|\__,_|_| |_|
+                    __/ |                      
+                   |___/                       """)
+
+time.sleep(0.5)
+
 word_list = list(get_english_words_set(["gcide"], lower=True))
-
 chosen_word = random.choice(word_list)
+
 display_blanks = "_" * len(chosen_word)
+guessed_list = []
 
-print()
-print(chosen_word)
-print(len(chosen_word))
-print()
+end_of_game = False
+lives = 6
 
-print(f"Generated word: {display_blanks}")
-guess_letter = input("Guess a letter: ").lower()
-print()
+while not end_of_game:
 
-if guess_letter in chosen_word:
-    index_list = find_indexes(chosen_word, guess_letter)
+    print(hangman[6-lives])
+    print(f"Generated word: {display_blanks}")
+    print("=========")
+    print("Guessed list: ", end="")
+    print(*guessed_list, sep=", ")
+    guess_letter = input("Guess a letter: ").lower()
 
-    display_blanks_list = list(display_blanks)
+    if guess_letter == "help":
+        print("                                  ")
+        print(chosen_word)
+        print(len(chosen_word))
+        continue
 
-    for i in index_list:
-        display_blanks_list[i] = guess_letter
+    if len(guess_letter) == 1:
+        guessed_list.append(guess_letter)
+    else:
+        print("                                  ")
+        print("                                  ")
+        print("                                  ")
+        print("                                  ")
+        print("                                  ")
+        print("                                  ")
+        print("Please enter a letter, not a word.")
+        print("                                  ")
+        time.sleep(2)
 
-    display_blanks = "".join(display_blanks_list)
-else:
-    print(f"None")
+    if guess_letter in chosen_word:
+        index_list = find_indexes(chosen_word, guess_letter)
 
-print(display_blanks)
+        display_blanks_list = list(display_blanks)
+
+        for i in index_list:
+            display_blanks_list[i] = guess_letter
+
+        display_blanks = "".join(display_blanks_list)
+    else:
+        lives -= 1
+        if lives == 0:
+            print(hangman[6])
+            print("You lost.")
+            end_of_game = True
+
+    if "_" not in display_blanks:
+        print("You've won!")
+        end_of_game = True
