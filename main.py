@@ -22,12 +22,15 @@ lives = 6
 
 while not end_of_game:
 
-    print(hangman[6-lives])
+    print("-----------------------------------------------------------------------------------------------------------")
+    print(hangman[6 - lives])
     print(f"Generated word: {display_blanks}")
     print("=========")
     print("Guessed list: ", end="")
     print(*guessed_list, sep=", ")
     guess_letter = input("Guess a letter: ").lower()
+
+    os.system('cls')
 
     if guess_letter == "help":
         print("                                  ")
@@ -36,7 +39,19 @@ while not end_of_game:
         continue
 
     if len(guess_letter) == 1:
-        guessed_list.append(guess_letter)
+        if guess_letter not in guessed_list:
+            guessed_list.append(guess_letter)
+        else:
+            print("                                  ")
+            print("                                  ")
+            print("                                  ")
+            print("                                  ")
+            print("                                  ")
+            print("                                  ")
+            print("You already guessed it.")
+            print("                                  ")
+            time.sleep(1)
+            continue
     else:
         print("                                  ")
         print("                                  ")
@@ -61,9 +76,12 @@ while not end_of_game:
         lives -= 1
         if lives == 0:
             print(hangman[6])
+            print()
             print("You lost.")
+            print(f"The word was: {chosen_word}")
             end_of_game = True
 
     if "_" not in display_blanks:
         print("You've won!")
+        print(f"The word was: {chosen_word}")
         end_of_game = True
