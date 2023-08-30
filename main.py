@@ -1,3 +1,7 @@
+from english_words import get_english_words_set
+import os
+import random
+import time
 from functions import *
 
 print(""" _                                             
