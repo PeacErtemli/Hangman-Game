@@ -1,4 +1,4 @@
-def find_indexes(word, letter):
+def find_indexes(word, letter):  # Finds the index of the letter in the word
     index_list = []
 
     for i in range(len(word)):
