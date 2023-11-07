@@ -7,7 +7,7 @@ def find_indexes(word, letter):  # Finds the index of the letter in the word
 
     return index_list
 
-
+# Hangman figures with printable format
 hangman = ["  +---+\n  |   |\n      |\n      |\n      |\n      |\n=========",
 
            "  +---+\n  |   |\n  O   |\n      |\n      |\n      |\n=========",
