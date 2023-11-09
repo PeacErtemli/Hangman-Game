@@ -13,7 +13,7 @@ print(""" _
                     __/ |                      
                    |___/                       """)
 
-time.sleep(0.5)
+time.sleep(0.5) # Waits 0.5 seconds
 
 word_list = list(get_english_words_set(["gcide"], lower=True))
 chosen_word = random.choice(word_list)
