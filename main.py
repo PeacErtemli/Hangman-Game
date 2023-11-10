@@ -13,9 +13,9 @@ print(""" _
                     __/ |                      
                    |___/                       """)
 
-time.sleep(0.5) # Waits 0.5 seconds
+time.sleep(0.5)  # Waits 0.5 seconds
 
-word_list = list(get_english_words_set(["gcide"], lower=True))
+word_list = list(get_english_words_set(["gcide"], lower=True))  # Gets a list of words from the gcide dictionary
 chosen_word = random.choice(word_list)
 
 display_blanks = "_" * len(chosen_word)
