@@ -16,7 +16,7 @@ print(""" _
 time.sleep(0.5)  # Waits 0.5 seconds
 
 word_list = list(get_english_words_set(["gcide"], lower=True))  # Gets a list of words from the gcide dictionary
-chosen_word = random.choice(word_list)
+chosen_word = random.choice(word_list)  # Chooses a random word from the list
 
 display_blanks = "_" * len(chosen_word)
 guessed_list = []
