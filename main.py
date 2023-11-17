@@ -22,7 +22,7 @@ display_blanks = "_" * len(chosen_word)  # Creates a string of underscores with 
 guessed_list = []  # List of guessed letters
 
 end_of_game = False # Boolean to check if the game has ended
-lives = 6
+lives = 6 # Number of lives
 
 while not end_of_game:
 
