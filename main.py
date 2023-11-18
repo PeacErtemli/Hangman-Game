@@ -21,10 +21,10 @@ chosen_word = random.choice(word_list)  # Chooses a random word from the list
 display_blanks = "_" * len(chosen_word)  # Creates a string of underscores with the length of the chosen word
 guessed_list = []  # List of guessed letters
 
-end_of_game = False # Boolean to check if the game has ended
-lives = 6 # Number of lives
+end_of_game = False  # Boolean to check if the game has ended
+lives = 6  # Number of lives
 
-while not end_of_game:
+while not end_of_game:  # While the game hasn't ended
 
     print("-----------------------------------------------------------------------------------------------------------")
     print(hangman[6 - lives])
