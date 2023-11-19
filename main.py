@@ -27,7 +27,7 @@ lives = 6  # Number of lives
 while not end_of_game:  # While the game hasn't ended
 
     print("-----------------------------------------------------------------------------------------------------------")
-    print(hangman[6 - lives])
+    print(hangman[6 - lives])  # Prints the hangman figure
     print(f"Generated word: {display_blanks}")
     print("=========")
     print("Guessed list: ", end="")
