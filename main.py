@@ -28,7 +28,7 @@ while not end_of_game:  # While the game hasn't ended
 
     print("-----------------------------------------------------------------------------------------------------------")
     print(hangman[6 - lives])  # Prints the hangman figure
-    print(f"Generated word: {display_blanks}")
+    print(f"Generated word: {display_blanks}")  # Prints the word with blanks
     print("=========")
     print("Guessed list: ", end="")
     print(*guessed_list, sep=", ")
