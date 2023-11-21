@@ -30,7 +30,7 @@ while not end_of_game:  # While the game hasn't ended
     print(hangman[6 - lives])  # Prints the hangman figure
     print(f"Generated word: {display_blanks}")  # Prints the word with blanks
     print("=========")
-    print("Guessed list: ", end="")
+    print("Guessed list: ", end="")  # Prints the guessed letters
     print(*guessed_list, sep=", ")
     guess_letter = input("Guess a letter: ").lower()
 
