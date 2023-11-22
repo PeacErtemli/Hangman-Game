@@ -31,7 +31,7 @@ while not end_of_game:  # While the game hasn't ended
     print(f"Generated word: {display_blanks}")  # Prints the word with blanks
     print("=========")
     print("Guessed list: ", end="")  # Prints the guessed letters
-    print(*guessed_list, sep=", ")
+    print(*guessed_list, sep=", ")  # Prints the guessed letters
     guess_letter = input("Guess a letter: ").lower()
 
     os.system('cls')
