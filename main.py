@@ -34,7 +34,7 @@ while not end_of_game:  # While the game hasn't ended
     print(*guessed_list, sep=", ")  # Prints the guessed letters
     guess_letter = input("Guess a letter: ").lower()
 
-    os.system('cls')
+    os.system('cls')  # Clears the console
 
     if guess_letter == "help":
         print("                                  ")
