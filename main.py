@@ -32,7 +32,7 @@ while not end_of_game:  # While the game hasn't ended
     print("=========")
     print("Guessed list: ", end="")  # Prints the guessed letters
     print(*guessed_list, sep=", ")  # Prints the guessed letters
-    guess_letter = input("Guess a letter: ").lower()
+    guess_letter = input("Guess a letter: ").lower()  # Asks for a letter
 
     os.system('cls')  # Clears the console
 
