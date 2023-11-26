@@ -37,7 +37,7 @@ while not end_of_game:  # While the game hasn't ended
     os.system('cls')  # Clears the console
 
     if guess_letter == "help":  # If the user types "help"
-        print("                                  ")
+        print("                                  ")  # Prints a blank line
         print(chosen_word)
         print(len(chosen_word))
         continue
