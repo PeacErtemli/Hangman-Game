@@ -38,7 +38,7 @@ while not end_of_game:  # While the game hasn't ended
 
     if guess_letter == "help":  # If the user types "help"
         print("                                  ")  # Prints a blank line
-        print(chosen_word)
+        print(chosen_word)  # Prints the chosen word
         print(len(chosen_word))
         continue
 
