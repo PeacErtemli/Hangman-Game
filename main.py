@@ -40,7 +40,7 @@ while not end_of_game:  # While the game hasn't ended
         print("                                  ")  # Prints a blank line
         print(chosen_word)  # Prints the chosen word
         print(len(chosen_word))  # Prints the length of the chosen word
-        continue
+        continue  # Goes to the next iteration
 
     if len(guess_letter) == 1:
         if guess_letter not in guessed_list:
